@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Atlas | Favorites</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body data-page="favorites">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">
+            <img
+              class="brand-mark__image"
+              src="./assets/images/earth-logo.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span class="brand-copy">
+            <strong>Country Atlas</strong>
+            <small>Explore the world in one place</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link" href="./index.html">Countries</a>
+          <a class="nav-link is-active" href="./favorites.html">Favorites</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <section class="section-heading">
+          <h1>Your favorite countries</h1>
+          <a class="ghost-link" href="./index.html">Add more countries</a>
+        </section>
+
+        <section class="panel panel--soft">
+          <p class="status-line" id="favorites-summary" aria-live="polite">
+            Loading favorites...
+          </p>
+        </section>
+
+        <section aria-labelledby="favorites-title">
+          <h2 id="favorites-title" class="visually-hidden">Favorite countries</h2>
+          <div id="favorites-grid" class="country-grid country-grid--fixed" hidden></div>
+          <div id="favorites-empty" class="empty-state" hidden>
+            <h3>No favorites saved yet</h3>
+            <p>
+              Visit the countries page and use the favorite button to save the
+              places you want to keep.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./assets/js/storage.js"></script>
+    <script src="./assets/js/helpers.js"></script>
+    <script src="./assets/js/ui.js"></script>
+    <script src="./assets/js/favorites.js"></script>
+  </body>
+</html>

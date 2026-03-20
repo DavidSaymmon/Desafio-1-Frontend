@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Atlas | Country Details</title>
+    <link rel="preconnect" href="https://restcountries.com" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body data-page="details">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">
+            <img
+              class="brand-mark__image"
+              src="./assets/images/earth-logo.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span class="brand-copy">
+            <strong>Country Atlas</strong>
+            <small>Explore the world in one place</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link" href="./index.html">Countries</a>
+          <a class="nav-link" href="./favorites.html">Favorites</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <section class="section-heading section-heading--stacked">
+          <a class="back-link" href="./index.html">Back to country list</a>
+          <div>
+            <p class="eyebrow">Country spotlight</p>
+            <h1>Detailed country view</h1>
+          </div>
+        </section>
+
+        <div
+          id="details-loader"
+          class="loader loader--page"
+          role="status"
+          aria-live="polite"
+        >
+          <div class="spinner" aria-hidden="true"></div>
+          <p>Loading country details...</p>
+        </div>
+
+        <div id="details-error" class="empty-state empty-state--error" hidden>
+          <h2>Country not found</h2>
+          <p>
+            The selected country could not be loaded. Return to the list and try
+            another one.
+          </p>
+        </div>
+
+        <article id="country-details" class="details-layout" hidden></article>
+      </div>
+    </main>
+
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/storage.js"></script>
+    <script src="./assets/js/helpers.js"></script>
+    <script src="./assets/js/ui.js"></script>
+    <script src="./assets/js/details.js"></script>
+  </body>
+</html>

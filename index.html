@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Atlas | Discover Countries</title>
+    <link rel="preconnect" href="https://restcountries.com" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">
+            <img
+              class="brand-mark__image"
+              src="./assets/images/earth-logo.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span class="brand-copy">
+            <strong>Country Atlas</strong>
+            <small>Explore the world in one place</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="./index.html">Countries</a>
+          <a class="nav-link" href="./favorites.html">Favorites</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-shell">
+        <div class="container">
+          <section class="panel toolbar-panel" aria-label="Country filters">
+            <form class="toolbar" id="search-form" novalidate>
+              <label class="field-group">
+                <span>Search countries</span>
+                <input
+                  id="search-input"
+                  name="search"
+                  type="search"
+                  placeholder="Try Brazil, Nairobi, Europe..."
+                  autocomplete="off"
+                />
+              </label>
+
+              <label class="field-group field-group--compact">
+                <span>Region</span>
+                <select id="region-select" name="region">
+                  <option value="all">All regions</option>
+                  <option value="africa">Africa</option>
+                  <option value="americas">Americas</option>
+                  <option value="asia">Asia</option>
+                  <option value="europe">Europe</option>
+                  <option value="oceania">Oceania</option>
+                </select>
+              </label>
+            </form>
+
+            <div class="toolbar-meta">
+              <p id="results-count" class="status-line" aria-live="polite">
+                Loading countries...
+              </p>
+            </div>
+          </section>
+
+          <section class="content-area" aria-labelledby="countries-list-title">
+            <h3 id="countries-list-title" class="visually-hidden">
+              Country cards
+            </h3>
+
+            <div
+              id="countries-loader"
+              class="loader"
+              role="status"
+              aria-live="polite"
+            >
+              <div class="spinner" aria-hidden="true"></div>
+              <p>Fetching country data...</p>
+            </div>
+
+            <div id="countries-grid" class="country-grid" hidden></div>
+
+            <div id="countries-empty" class="empty-state" hidden>
+              <h3>No countries found</h3>
+              <p>Try another search term or switch the selected region.</p>
+            </div>
+
+            <div
+              id="countries-error"
+              class="empty-state empty-state--error"
+              hidden
+            >
+              <h3>Unable to load countries</h3>
+              <p>
+                Check your connection and try refreshing the page to load the
+                data again.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/storage.js"></script>
+    <script src="./assets/js/helpers.js"></script>
+    <script src="./assets/js/ui.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

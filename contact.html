@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Atlas | Contact</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">
+            <img
+              class="brand-mark__image"
+              src="./assets/images/earth-logo.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span class="brand-copy">
+            <strong>Country Atlas</strong>
+            <small>Explore the world in one place</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link" href="./index.html">Countries</a>
+          <a class="nav-link" href="./favorites.html">Favorites</a>
+          <a class="nav-link is-active" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container form-page">
+        <section class="section-heading">
+          <div>
+            <p class="eyebrow">Feedback form</p>
+            <h1>Send a message</h1>
+          </div>
+        </section>
+
+        <section class="form-layout">
+          <section class="panel panel--form" aria-labelledby="contact-form-title">
+            <h2 id="contact-form-title">Contact form</h2>
+
+            <form id="contact-form" class="contact-form">
+              <label class="field-group">
+                <span>Name</span>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                />
+              </label>
+
+              <label class="field-group">
+                <span>Email</span>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                />
+              </label>
+
+              <label class="field-group">
+                <span>Feedback Message</span>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us what you liked or suggest an improvement"
+                ></textarea>
+              </label>
+
+              <button class="primary-button" type="submit">Send message</button>
+            </form>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
